@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             this,
             TimePickerDialog.OnTimeSetListener { view, hour, minute ->
-                if (2 <= hour && hour <= 10) {
+                if (2 <= hour && hour <= 9) {
                     textView.text = "おはよう"
-                } else if (10 <= hour && hour <= 18) {
+                } else if (10 <= hour && hour <= 17) {
                     textView.text = "こんにちは"
-                } else {
+                } else if (18 <= hour || hour <= 1){
                     textView.text = "こんばんは"
                 }
             },
